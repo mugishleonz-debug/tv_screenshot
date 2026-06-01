@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+cd "$(dirname "$0")"
+
+export TELEGRAM_BOT_TOKEN="${TELEGRAM_BOT_TOKEN:?Set TELEGRAM_BOT_TOKEN}"
+export TELEGRAM_CHAT_ID="${TELEGRAM_CHAT_ID:?Set TELEGRAM_CHAT_ID}"
+export SCREENSHOT_DIR="/Volumes/ドライブ D/tv_screenshot_images"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+
+exec /opt/homebrew/bin/node poller.js >> logs/poller.log 2>&1
