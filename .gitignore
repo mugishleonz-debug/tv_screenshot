@@ -10,4 +10,5 @@ screenshots/
 .env
 .env.*
 !.env.example
+CLAUDE.md
 npm-debug.log*
